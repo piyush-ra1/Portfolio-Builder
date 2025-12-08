@@ -1,0 +1,184 @@
+Build a fully animated, highly customized personal portfolio website using Next.js (latest), TypeScript, Three.js, Barba.js, with a Gen-Z dark rave theme. Follow the exact structure and features below.
+
+1. Tech Stack Requirements
+
+Next.js (App Router)
+
+TypeScript
+
+TailwindCSS + custom CSS variables
+
+Three.js for 3D hero section + interactive elements
+
+Barba.js for smooth page transitions
+
+Framer Motion for micro-animations
+
+GSAP for rave-style effects
+
+Lucide icons
+
+Responsiveness for all screens
+
+2. Theme Direction (Mandatory)
+
+Gen-Z Dark Rave Aesthetic
+
+Neon glows: purple, teal, blue, magenta
+
+High contrast black/charcoal backgrounds
+
+Noise textures, chromatic aberration, grain
+
+Glitch effects, rave-style pulse animations
+
+Smooth futuristic typography (Space Grotesk / Inter)
+
+3. Pages to Build
+(A) Home Page
+
+Full-screen Three.js animated background
+
+Interactive particles reacting to cursor
+
+My name in big rave-style typography
+
+Rotating 3D object (choose a minimal sphere, torus, or prism)
+
+Quick links: Skills | Projects | Contact
+
+Barba.js page transition into every section
+
+(B) About Me
+
+Photo in neon glow frame
+
+Sections for:
+
+Who I am
+
+What I do
+
+My mission and goals
+
+Smooth scroll + Framer Motion animation
+
+(C) Skills
+
+Grid of tech skills with hover glow effects
+
+Animated progress or proficiency indicators
+
+Category sections:
+
+Programming
+
+AI/ML
+
+Tools / Platforms
+
+(D) Projects
+
+Animated project cards
+
+Hover 3D tilt + neon border
+
+Each project opens a modal:
+
+Description
+
+Tech stack
+
+Screenshots
+
+GitHub link / Live link
+
+(E) Experience
+
+Timeline with neon glow connecting lines
+
+Animated scroll reveal
+
+Space for internship or freelance details
+
+(F) Education
+
+Card layout with glowing borders
+
+College name, degree, year
+
+Progress animation
+
+(G) Contact
+
+Fancy form with rave effects behind fields
+
+Fields: Name, Email, Message
+
+Validation + success animation
+
+Also include icons for GitHub, LinkedIn, Email
+
+4. Global Features
+
+Barba.js transitions between each page
+
+Cursor-follower neon trail
+
+Theme-wide glow + pulse animation
+
+Smooth preloader with glitch text
+
+Mobile-friendly menu with neon animation
+
+5. Content to Use in the Portfolio
+
+Replace all placeholder personal data with this:
+
+Name: Piyush Kumar Rai
+Role: AI/ML Enthusiast • Developer • BCA Final Year Student (Patliputra University)
+Email: raipiyusharsh3@gmail.com
+
+Skills:
+
+Languages: JavaScript, TypeScript, Python, C
+
+Frameworks: React, Next.js, Node.js
+
+AI/ML: TensorFlow, Scikit-Learn, NumPy, Pandas
+
+Tools: Git, VSCode, Docker (basic)
+Education:
+
+BCA (Final Year), Arcade Business College, Patliputra University
+Hobbies:
+Programming, Solo Drives, Reading, Gym, Music
+Projects (sample placeholders):
+
+AI Chatbot
+
+Portfolio Website
+
+E-Commerce Dashboard
+(Replit should ask me if more details needed.)
+
+6. Deliverables
+
+Complete folder structure
+
+Clean reusable components
+
+Fully working animations
+
+All pages functional
+
+Mobile optimized
+
+Deployment-ready code
+
+Dark-rave UI adhering strictly to Gen-Z vibes
+
+7. After Completing
+
+Ask me:
+“Do you want to add a blog section, testimonials, or a 3D interactive CV?”
