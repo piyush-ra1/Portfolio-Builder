@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0f;
+  --foreground: #ededed;
+  --neon-purple: #b829dd;
+  --neon-teal: #00f5d4;
+  --neon-blue: #00bbf9;
+  --neon-magenta: #f72585;
+  --neon-pink: #ff006e;
+  --glow-color: #b829dd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--neon-purple);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111118;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--neon-purple), var(--neon-teal));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--neon-magenta), var(--neon-blue));
+}
+
+.noise-overlay {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  background: transparent url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E") repeat;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+  animation: grain 8s steps(10) infinite;
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+}
+
+.neon-text {
+  text-shadow: 
+    0 0 5px var(--neon-purple),
+    0 0 10px var(--neon-purple),
+    0 0 20px var(--neon-purple),
+    0 0 40px var(--neon-purple);
+}
+
+.neon-text-teal {
+  text-shadow: 
+    0 0 5px var(--neon-teal),
+    0 0 10px var(--neon-teal),
+    0 0 20px var(--neon-teal),
+    0 0 40px var(--neon-teal);
+}
+
+.neon-text-blue {
+  text-shadow: 
+    0 0 5px var(--neon-blue),
+    0 0 10px var(--neon-blue),
+    0 0 20px var(--neon-blue),
+    0 0 40px var(--neon-blue);
+}
+
+.neon-border {
+  box-shadow: 
+    0 0 5px var(--neon-purple),
+    0 0 10px var(--neon-purple),
+    inset 0 0 5px rgba(184, 41, 221, 0.1);
+  border: 1px solid var(--neon-purple);
+}
+
+.neon-border-teal {
+  box-shadow: 
+    0 0 5px var(--neon-teal),
+    0 0 10px var(--neon-teal),
+    inset 0 0 5px rgba(0, 245, 212, 0.1);
+  border: 1px solid var(--neon-teal);
+}
+
+.glitch-effect {
+  position: relative;
+}
+
+.glitch-effect::before,
+.glitch-effect::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-effect::before {
+  animation: glitch-1 0.3s infinite;
+  color: var(--neon-teal);
+  z-index: -1;
+}
+
+.glitch-effect::after {
+  animation: glitch-2 0.3s infinite;
+  color: var(--neon-magenta);
+  z-index: -2;
+}
+
+@keyframes glitch-1 {
+  0%, 100% { clip-path: inset(40% 0 61% 0); transform: translate(-2px, 2px); }
+  20% { clip-path: inset(92% 0 1% 0); transform: translate(2px, -2px); }
+  40% { clip-path: inset(43% 0 1% 0); transform: translate(-2px, 2px); }
+  60% { clip-path: inset(25% 0 58% 0); transform: translate(2px, -2px); }
+  80% { clip-path: inset(54% 0 7% 0); transform: translate(-2px, 2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { clip-path: inset(50% 0 31% 0); transform: translate(2px, -2px); }
+  20% { clip-path: inset(12% 0 81% 0); transform: translate(-2px, 2px); }
+  40% { clip-path: inset(63% 0 21% 0); transform: translate(2px, -2px); }
+  60% { clip-path: inset(35% 0 48% 0); transform: translate(-2px, 2px); }
+  80% { clip-path: inset(24% 0 67% 0); transform: translate(2px, -2px); }
+}
+
+.chromatic-aberration {
+  position: relative;
+}
+
+.chromatic-aberration::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='chromatic'%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/%3E%3CfeOffset dx='2' dy='0' result='r'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0' in='SourceGraphic'/%3E%3CfeOffset dx='-2' dy='0' result='b'/%3E%3CfeBlend in='r' in2='b' mode='screen'/%3E%3C/filter%3E%3C/svg%3E#chromatic");
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.card-3d:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateZ(10px);
+}
+
+.gradient-border {
+  position: relative;
+  background: linear-gradient(var(--background), var(--background)) padding-box,
+              linear-gradient(135deg, var(--neon-purple), var(--neon-teal), var(--neon-blue)) border-box;
+  border: 2px solid transparent;
+  border-radius: 12px;
+}
+
+.rave-pulse {
+  animation: rave-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes rave-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 20px var(--neon-teal), 0 0 40px var(--neon-teal);
+    transform: scale(1.02);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@barba/core": "^2.10.3",
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@types/three": "^0.181.0",
+    "framer-motion": "^12.23.25",
+    "gsap": "^3.13.0",
+    "lucide-react": "^0.556.0",
+    "next": "14.2.33",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.68.0",
+    "three": "^0.181.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.33",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
