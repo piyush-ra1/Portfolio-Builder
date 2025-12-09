@@ -36,14 +36,14 @@ export default function Navigation() {
             </motion.span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
+          <div className="hidden sm:flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-8">
             {navItems.map((item, index) => (
               <Link key={item.name} href={item.href} className="block">
                 <motion.span
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * index }}
-                  className="text-white/90 hover:text-neon-teal transition-colors duration-300 text-xs md:text-sm uppercase tracking-wider font-medium cursor-pointer whitespace-nowrap"
+                  className="text-white/90 hover:text-neon-teal transition-colors duration-300 text-xs sm:text-sm uppercase tracking-wider font-medium cursor-pointer whitespace-nowrap"
                   whileHover={{ y: -2 }}
                 >
                   {item.name}
@@ -55,7 +55,7 @@ export default function Navigation() {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden relative z-[10001] p-2 text-white hover:text-neon-teal transition-colors"
+            className="sm:hidden relative z-[10001] p-2 text-white hover:text-neon-teal transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -70,7 +70,7 @@ export default function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[10000] bg-dark-900/95 backdrop-blur-lg md:hidden"
+            className="fixed inset-0 z-[10000] bg-dark-900/95 backdrop-blur-lg sm:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full gap-8">
               {navItems.map((item, index) => (
