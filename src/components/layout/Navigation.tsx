@@ -36,14 +36,14 @@ export default function Navigation() {
             </motion.span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
             {navItems.map((item, index) => (
-              <Link key={item.name} href={item.href}>
+              <Link key={item.name} href={item.href} className="block">
                 <motion.span
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * index }}
-                  className="text-white/90 hover:text-neon-teal transition-colors duration-300 text-sm uppercase tracking-wider font-medium"
+                  className="text-white/90 hover:text-neon-teal transition-colors duration-300 text-xs md:text-sm uppercase tracking-wider font-medium cursor-pointer whitespace-nowrap"
                   whileHover={{ y: -2 }}
                 >
                   {item.name}
@@ -56,6 +56,7 @@ export default function Navigation() {
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden relative z-[10001] p-2 text-white hover:text-neon-teal transition-colors"
+            aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
