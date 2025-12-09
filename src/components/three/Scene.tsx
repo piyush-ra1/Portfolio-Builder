@@ -51,7 +51,7 @@ export default function Scene() {
       if (!gl) {
         setHasWebGL(false);
       }
-    } catch (e) {
+    } catch {
       setHasWebGL(false);
     }
   }, []);

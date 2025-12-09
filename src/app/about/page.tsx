@@ -111,7 +111,7 @@ export default function AboutPage() {
               className="flex flex-wrap gap-3"
             >
               {["Passionate", "Creative", "Problem Solver", "Team Player"].map(
-                (trait, i) => (
+                (trait) => (
                   <span
                     key={trait}
                     className="px-4 py-2 bg-dark-700 rounded-full text-sm text-gray-300 border border-dark-600 hover:border-neon-purple transition-colors"
