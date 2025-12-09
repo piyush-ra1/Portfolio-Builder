@@ -24,7 +24,7 @@ export default function Navigation() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="fixed top-0 left-0 right-0 z-50 px-6 py-4"
+        className="fixed top-0 left-0 right-0 z-[10000] px-6 py-4 bg-dark-900/80 backdrop-blur-md border-b border-dark-600/50"
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link href="/" className="group">
@@ -43,7 +43,7 @@ export default function Navigation() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * index }}
-                  className="text-gray-300 hover:text-neon-teal transition-colors duration-300 text-sm uppercase tracking-wider"
+                  className="text-white/90 hover:text-neon-teal transition-colors duration-300 text-sm uppercase tracking-wider font-medium"
                   whileHover={{ y: -2 }}
                 >
                   {item.name}
@@ -55,7 +55,7 @@ export default function Navigation() {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden relative z-50 p-2 text-white"
+            className="md:hidden relative z-[10001] p-2 text-white hover:text-neon-teal transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
@@ -69,7 +69,7 @@ export default function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-40 bg-dark-900/95 backdrop-blur-lg md:hidden"
+            className="fixed inset-0 z-[10000] bg-dark-900/95 backdrop-blur-lg md:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full gap-8">
               {navItems.map((item, index) => (
